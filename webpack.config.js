@@ -1,7 +1,7 @@
 module.exports = {
     entry: "./src/main.js",
     output: {
-        path: __dirname + '/build/js/',
+        path: __dirname + '/app/js/',
         filename: "webcalculator.js"
     },
     mode: 'development',
