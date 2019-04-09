@@ -1,7 +1,9 @@
+const path = require('path');
+
 module.exports = {
     entry: "./src/main.js",
     output: {
-        path: __dirname + '/app/js/',
+        path: path.join(__dirname, 'app/js'),
         filename: "webcalculator.js"
     },
     mode: 'development',
@@ -15,5 +17,10 @@ module.exports = {
             }
           }
         ]
+      },
+      devServer: {
+        contentBase: path.join(__dirname, 'app'),
+        compress: true,
+        port: 9000
       }
   }
