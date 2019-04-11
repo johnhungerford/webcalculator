@@ -4,6 +4,7 @@ export default function calculate(currentState, buttonName) {
         throw new TypeError('calculate(): currentState parameter missing or invalid');
     }
 
+    if (buttonName === 'empty') return currentState;
     if (buttonName === 'AC') return { total: null, next: null, operation: null };
 
     if (buttonName === '=') {
@@ -11,38 +12,38 @@ export default function calculate(currentState, buttonName) {
         if (currentState.next === null) return currentState;
         if (currentState.operation === null) return currentState;
 
-        let newTotal = parseInt(currentState.total);
+        let newTotal = parseFloat(currentState.total);
 
         switch(currentState.operation) {
             case 'x':
-                newTotal *= parseInt(currentState.next);
+                newTotal *= parseFloat(currentState.next);
                 break;
             case '-':
-                newTotal -= parseInt(currentState.next);
+                newTotal -= parseFloat(currentState.next);
                 break;
             case '+':
-                newTotal += parseInt(currentState.next);
+                newTotal += parseFloat(currentState.next);
                 break;
             case '÷':
-                newTotal += parseInt(currentState.next);
+                newTotal /= parseFloat(currentState.next);
                 break;
             default:
                 throw new Error('Invalid state.operation!');
         }
 
         return {
-            total: newTotal.toString(),
-            next: null,
+            total: null,
+            next: newTotal.toString(),
             operation: null,
         };
     }
 
     if (buttonName === '+/-') {
-        if (currentState.next === null || parseInt(currentState.next === '0') === 0) return currentState;
+        if (currentState.next === null || parseFloat(currentState.next === '0') === 0) return currentState;
         if (currentState.next[0] === '-') {
             var newNext = currentState.next.slice(1);
         } else {
-            var newNext = '-' + currentState;
+            var newNext = '-' + currentState.next;
         }
 
         return {
@@ -106,7 +107,7 @@ export default function calculate(currentState, buttonName) {
             } 
             break;
         case '.':
-            if (currentState.next === null || parseInt(currentState.next) === 0) {
+            if (currentState.next === null || parseFloat(currentState.next) === 0) {
                 return {
                     total: currentState.total,
                     next: '0.',

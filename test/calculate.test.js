@@ -151,11 +151,11 @@ describe('calculate()', function() {
         });
 
         context('buttonName is equals', ()=>{
-          it('should perform operation, put result in total, make next and operation null', ()=>{
+          it('should perform operation, put result in next, make total and operation null', ()=>{
             mockButtonName = '=';
             mockState.operation = 'x';
-            resultState.total = (3452342 * 34546323).toString();
-            resultState.next = null;
+            resultState.total = null;
+            resultState.next = (3452342 * 34546323).toString();
             resultState.operation = null;
             expect(calculate(mockState, mockButtonName)).to.eql(resultState);
           });
@@ -165,8 +165,8 @@ describe('calculate()', function() {
           it('should perform operation, put result in total, make next null, and set operation to buttonName', ()=>{
             mockButtonName = '-';
             mockState.operation = 'x';
-            resultState.total = (3452342 * 34546323).toString();
-            resultState.next = null;
+            resultState.total = null;
+            resultState.next = (3452342 * 34546323).toString();
             resultState.operation = '-';
             expect(calculate(mockState, mockButtonName)).to.eql(resultState);
           });

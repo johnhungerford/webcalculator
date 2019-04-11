@@ -1,0 +1,10 @@
+.component-button {
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.component-button:hover {
+    cursor: pointer;
+}

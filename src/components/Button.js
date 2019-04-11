@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 export default class Button extends Component {
     handleClick = () => {
-        this.props.handleClick(this.props.name);
+        this.props.clickHandler(this.props.name);
     }
 
     render() {
         return (
-            <div className='component-button'>
-                <button onClick={this.handleClick}>{this.props.name}</button>
+            <div className='component-button' onClick={this.props.name ? this.handleClick : ()=>{}}>
+                <span>{this.props.name || '   '}</span>
             </div>
         );
     }

@@ -15,6 +15,7 @@ export default class App extends Component{
    }
 
    handleClick = buttonName => {
+      console.log(calculate(this.state, buttonName));
       this.setState(currentState => calculate(currentState, buttonName));
    }
 
@@ -25,7 +26,7 @@ export default class App extends Component{
       return(
          <div className='component-webcalc-app'>
             <Display value={displayVal}/>
-            {/*<ButtonPanel clickHandler={this.handleClick}/>*/}
+            <ButtonPanel clickHandler={this.handleClick}/>
          </div>
       );
    }
