@@ -101,6 +101,7 @@ export default function calculate(currentState, buttonName) {
             }
 
             if (currentState.total === null && currentState.operation !== null) {
+                console.log('just testing');
                 return {
                     total: currentState.next,
                     next: buttonName,
