@@ -99,6 +99,14 @@ export default function calculate(currentState, buttonName) {
                     operation: currentState.operation,
                 };
             }
+
+            if (currentState.total === null && currentState.operation !== null) {
+                return {
+                    total: currentState.next,
+                    next: buttonName,
+                    operation: currentState.operation,
+                } 
+            }
             
             return {
                 total: currentState.total,
@@ -115,6 +123,14 @@ export default function calculate(currentState, buttonName) {
                 };
             }
 
+            if (currentState.total === null && currentState.operation !== null) {
+                return {
+                    total: currentState.next,
+                    next: '0.',
+                    operation: currentState.operation,
+                }
+            }
+            
             for (let i = 0; i < currentState.next; i++) {
                 if (currentState.next[i] === '.') return currentState;
             }
