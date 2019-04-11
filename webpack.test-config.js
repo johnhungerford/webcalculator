@@ -17,6 +17,15 @@ module.exports = {
           }
         ]
       },
+    module: {
+        rules: [
+            {
+                test: /test\.js$/,
+                use: 'mocha-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
     devServer: {
       contentBase: path.join(__dirname, 'app'),
       publicPath: '/js/',
