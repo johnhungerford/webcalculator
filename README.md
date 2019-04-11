@@ -18,6 +18,6 @@ To do a complete build in production mode, which will generate `webcalculator.js
 
 `npm run build`
 
-It is configured to test all `.test.js` files with mocha, which can be run by:
+It is configured to test all `*.test.js` files with mocha, which can be run by:
 
 `npm run test`
