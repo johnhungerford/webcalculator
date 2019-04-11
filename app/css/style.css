@@ -53,6 +53,10 @@ body {
     user-select: none;  
 }
 
+.component-button:active {
+    background-color: rgb(92, 92, 92);
+}
+
 .button-text {
     display: flex;
     flex-direction: row;
