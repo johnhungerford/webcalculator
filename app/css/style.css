@@ -27,7 +27,7 @@ body {
     display: inline-block;
     width: calc((100% / 4) - 2px);
     min-width: 30px;
-    height: calc((100% / 7) - 2px);
+    height: calc((100% / 8) - 2px);
     min-height: 20px;
     border: 1px solid black;
     text-align: center;
@@ -75,14 +75,16 @@ body {
     position: absolute;
     left: 20px;
     text-align: left;
-    top: calc(50% - 8px);
+    top: calc(50% - 12px);
     width: 30px;
     font-weight: bold;
+    font-size: 24px;
 }
 
 .number-view {
     position: absolute;
     right: 20px;
-    top: calc(50% - 8px);
+    top: calc(50% - 15px);
     font-weight: bold;
+    font-size: 30px;
 }
