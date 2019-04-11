@@ -6,9 +6,9 @@ Alternatively, you can run it on a local server (development mode) by using:
 
 `npm start`
 
-and opening a the following in a browser: http://localhost:9000.
+and opening http://localhost:9000 in a browser. It is configured to run in hot mode, meaning that any changes to the source code or the static files (css, html) will trigger a rebuild and restart.
 
-This will require installing dependencies, using:
+This will require installing dependencies, which you can do with:
 
 `npm install`
 
