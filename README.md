@@ -1,6 +1,6 @@
 # webcalculator
 
-A simple javascript calculator, based on an example by ahfarmer: https://ahfarmer.github.io/calculator/. This was developed as an exercise to learn React; it was also an occasion to get some experience with webpack.
+A simple javascript calculator, based on an example by ahfarmer: https://ahfarmer.github.io/calculator/. It was developed as an exercise to learn React and to get some experience with webpack.
 
 You can run the calculator by opening `app/index.html` in you browser.
 
