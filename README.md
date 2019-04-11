@@ -1,5 +1,7 @@
 # webcalculator
 
+https://johnhungerford.github.io/webcalculator/app/
+
 A simple javascript calculator, based on an example by ahfarmer: https://ahfarmer.github.io/calculator/. It was developed as an exercise to learn React and to get some experience with webpack. It was also my first project using mocha for testing.
 
 You can run the calculator by opening `app/index.html` in you browser.
