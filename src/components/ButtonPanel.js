@@ -11,10 +11,10 @@ export default class ButtonPanel extends Component {
     render() {
         return (
             <div className='component-button-panel'>
-                <div>
+                <div className='button-row'>
                     <Button name='AC' clickHandler={this.handleClick} />
                     <Button name='+/-' clickHandler={this.handleClick} />
-                    <Button />
+                    <Button name='spacer' clickHandler={this.handleClick} />
                     <Button name='÷' clickHandler={this.handleClick} />
                 </div>
                 <div className='button-row'>
@@ -38,7 +38,7 @@ export default class ButtonPanel extends Component {
                 <div className='button-row'>
                     <Button name='0' clickHandler={this.handleClick} />
                     <Button name='.' clickHandler={this.handleClick} />
-                    <Button />
+                    <Button name='spacer' clickHandler={this.handleClick} />
                     <Button name='=' clickHandler={this.handleClick} />
                 </div>
             </div>

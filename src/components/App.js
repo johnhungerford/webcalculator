@@ -25,8 +25,10 @@ export default class App extends Component{
       if (displayVal === null) displayVal = '0';
       return(
          <div className='component-webcalc-app'>
-            <Display value={displayVal}/>
-            <ButtonPanel clickHandler={this.handleClick}/>
+            <div className='webcalc-container'>
+               <Display operation={this.state.operation} value={displayVal}/>
+               <ButtonPanel clickHandler={this.handleClick}/>
+            </div>
          </div>
       );
    }

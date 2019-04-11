@@ -7,9 +7,21 @@ export default class Button extends Component {
     }
 
     render() {
+        if (this.props.name === 'spacer') {
+            return (
+                <div className={'component-button dark'}>
+                    <div className='button-text invisible-elem'>
+                        <span>xxx</span>
+                    </div>
+                </div>
+            );
+        }
+
         return (
-            <div className='component-button' onClick={this.props.name ? this.handleClick : ()=>{}}>
-                <span>{this.props.name || '   '}</span>
+            <div className={'component-button'} onClick={this.handleClick}>
+                <div className='button-text'>
+                    <span>{this.props.name}</span>
+                </div>
             </div>
         );
     }
