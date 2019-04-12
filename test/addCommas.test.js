@@ -80,6 +80,10 @@ describe('addCommas()', ()=>{
         it('should add a single comma to 5632.93238427313', ()=>{
 
         });
+
+        it('should not mutate original string from above test', ()=>{
+            
+        });
     });
 
 });
