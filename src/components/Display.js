@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import addCommas from '../logic/addCommas.js';
+
 export default class Display extends Component {
     render() {
         return (

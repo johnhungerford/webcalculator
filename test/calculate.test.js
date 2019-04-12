@@ -96,11 +96,23 @@ describe('calculate()', function() {
         });
       });
 
-      context('currentState.next is not null', ()=>{
-        it('should append buttonName to currentState.next', ()=>{
+      context('currentState.next is not null, currentState.operation is null', ()=>{
+        it('should append buttonName number to next', ()=>{
           mockState.next = '58797';
+          mockState.operation = null;
           resultState.total = mockState.total;
           resultState.next = '587974';
+          resultState.operation = mockState.operation;
+          expect(calculate(mockState, mockButtonName)).to.eql(resultState);
+        });
+      });
+
+      context('currentState.next is not null, currentState.operation is not null', ()=>{
+        it('should move next to total, set next to buttonName number', ()=>{
+          mockState.next = '58797';
+          mockState.operation = '+';
+          resultState.total = mockState.next;
+          resultState.next = mockButtonName;
           resultState.operation = mockState.operation;
           expect(calculate(mockState, mockButtonName)).to.eql(resultState);
         });
