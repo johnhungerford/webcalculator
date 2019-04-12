@@ -164,7 +164,7 @@ export default function calculate(currentState, buttonName) {
                 }
             }
             
-            for (let i = 0; i < currentState.next; i++) {
+            for (let i = 0; i < currentState.next.length; i++) {
                 if (currentState.next[i] === '.') return currentState;
             }
 
@@ -173,7 +173,6 @@ export default function calculate(currentState, buttonName) {
                 next: currentState.next + '.',
                 operation: currentState.operation,
             }
-            break;
         default:
             // There shouldn't be any button names submitted to this function outside of
             // the above.

@@ -269,6 +269,22 @@ describe('calculate()', function() {
         });
       });
     });
+  
+    it('should be able to handle going from "9876543210" to "9876543210."', ()=>{
+      var testState = {
+        total: null,
+        next: '9876543210',
+        operation: null,
+      }
+
+      var testResultState = {
+        total: null,
+        next: '9876543210.',
+        operation: null,
+      }
+
+      expect(calculate(testState, '.')).to.eql(testResultState);
+    });
   });
   
 });

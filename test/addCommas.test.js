@@ -109,4 +109,9 @@ describe('addCommas()', ()=>{
         });
     });
 
+    it('should be able to handle "9876543210."', ()=>{
+        const strin = '9876543210.';
+        expect(addCommas(strin)).to.eql('9,876,543,210.');
+    });
+
 });
