@@ -11,7 +11,7 @@ export default class Display extends Component {
                 </div>
                 <div className='number-view'>
                     <span className='component-display-span'>
-                        {this.props.value}
+                        {addCommas(this.props.value)}
                     </span>
                 </div>
             </div>
